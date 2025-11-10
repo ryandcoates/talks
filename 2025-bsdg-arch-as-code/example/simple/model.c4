@@ -1,0 +1,48 @@
+specification {
+    element actor {style{shape person size small}}
+    element system
+    element externalSystem {style{color gray}}
+    element container
+    element component
+
+}
+
+model {
+
+    user = actor "System User"
+    admin = actor "System Administrator"
+    github = externalSystem "GitHub Cloud" {style{icon tech:github size small}}
+    sys = system "Our Software" {
+        app = container "Application" {
+            wfe = component "Web Front End"
+            api = component "Backend API"
+            lib = component "Common Library"
+            
+            wfe -> api "accesses"
+            api -> lib "consumes"
+        }
+        db = container "Database"
+
+        app -> db "reads/writes"
+
+    }
+
+    user -> sys "Interacts with system"
+    admin -> sys "Administers system"
+    admin -> github "Reads/Writes source code"
+
+}
+
+views {
+    view index {
+        include *
+    }
+
+    view of sys {
+        include *
+    }
+
+    view of app {
+        include *
+    }
+}
