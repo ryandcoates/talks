@@ -1,0 +1,47 @@
+specification {
+    element actor
+    element system
+    element container
+    element component
+}
+
+model {
+    user = actor "User" {style {shape person size small}}
+    exSys = system "External System" {style {color gray size small}}
+    sys = system "Software System" {
+        style {color indigo}
+        db = container "Database" {style {shape storage}}
+        app = container "WebApp" {
+            lib = component "Shared Library"
+            fe = component "Front End"
+            api = component "Backend Api"
+
+            fe -> api
+            api -> lib
+            fe -> lib
+        }
+
+        app -> db
+    }
+
+    sys -> exSys "Utilizes"
+
+    user -> app "Accesses"
+}
+
+views {
+    view index {
+        title "Context"
+        include *
+    }
+
+    view of sys {
+        title "Containers of Software System"
+        include *
+    }
+
+    view of app {
+        title "Components of WebApp"
+        include *
+    }
+}
