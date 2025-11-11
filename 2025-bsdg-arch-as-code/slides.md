@@ -121,6 +121,14 @@ With the C4 model, components are not separately deployable units. Instead, itâ€
 
 Finally, components are made up of one or more code elements constructed with the basic building blocks of the programming language that youâ€™re using - classes, interfaces, enums, functions, objects, etc.
 
+|||
+
+## Other Views
+
+- System Landscape
+- Dynamic
+- Deployment
+
 ---
 
 <!-- .slide: data-background-image="context_c4.png" data-background-size="contain"-->
@@ -143,6 +151,7 @@ Finally, components are made up of one or more code elements constructed with th
 ---
 
 ## LikeC4
+
 A domain-specific language for expressing C4 diagrams as code.
 
 ```likec4
@@ -160,3 +169,25 @@ model {
     relationship api -> db "Reads/Writes"
   }
 }
+```
+
+|||
+
+## LikeC4 Tooling
+
+- lkec4 cli tool
+- likec4 vscode extension
+- likec4 playground
+
+|||
+
+## LikeC4 CLI
+
+Install via `npm` or use `npx` at runtime
+
+- `likec4 serve`
+- `likec4 generate`
+- `likec4 build`
+- `likec4 export`
+
+Note: Demo some of these ryan
