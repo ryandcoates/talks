@@ -51,7 +51,10 @@ UML gave us a standard way to model:
 - Behavior (sequence, state, activity diagrams)  
 
 For a time, UML brought a golden age of **architectural clarity and documentation**.  
-Architecture was once again a first-class concern.
+
+|||
+
+Architecture was once again a __first-class__ concern.
 
 |||
 
@@ -79,7 +82,19 @@ Yet, we often still design them the way we did in the whiteboard era.
 
 |||
 
+> Architecture occurs regardless of intent.
+
+|||
+
 We need a lightweight, expressive, *shared language* for describing modern architecture, one that fits our Agile world without losing structure or clarity.
+
+|||
+
+<!-- .slide: data-background-image="steno.jpg" data-background-size="contain"-->
+
+Note: Often reach speeds upward of 300wpm (200 required for certification)
+
+|||
 
 Enter __C4__
 
